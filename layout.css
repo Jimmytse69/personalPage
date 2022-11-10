@@ -1,0 +1,52 @@
+/* variables defition */
+:root{
+    --navBarWidth: 100px;
+}
+
+/* navbar */
+.nav{
+    font-size: large;
+    background-color: gray;
+    width: var(--navBarWidth);
+
+    /* make the whole nav bar stick at left hand side */
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* navbar item (linked tab, <a>) */
+.nav>a{
+    display: block;    
+}
+
+/* main content of page */
+.main{
+    /* to maintain same offset as nav bar */
+    position: fixed;
+    left: var(--navBarWidth);
+
+    margin: 10px;
+
+    /* use when testing phase for better visualization */
+    border: 5px solid green;
+}
+
+/* footer page for link and last mod info */
+footer{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: var(--navBarWidth);
+
+    background-color: cyan;
+
+    /* use when testing phase for better visualization */
+}
+
+/* link item in footer */
+footer>a{
+    float: right;
+    padding: 10px;
+}
